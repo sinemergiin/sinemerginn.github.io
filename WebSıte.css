@@ -1,0 +1,443 @@
+
+body {
+    margin-top: 20px; 
+    font-family: 'Montserrat', sans-serif; /* Genel font */
+    margin: 0; /* sayfa kenar boşlukr */
+    padding: 0; /* Sayfa dolgusu */
+    background-color: #f1ecf0;
+    color: #e3cae1; 
+    line-height: 1.6; /* Satır yüksek belirleme */
+}
+
+
+.header-content h1{ /* hoca yaptırdı */
+    margin: auto; 
+    width: 500px; /* kutuların genişliği */
+    height: 170px; /* kutuların yüksekliği */
+    border: 3px solid #ccc; /* kutulardaki kenar çizgiler */
+    border-radius: 10px; /* Kenar ovalliği */
+    padding-top: 60px;
+    
+}
+
+header {
+    font-size: 150%; /* Başlık boyutu */
+    font-weight: 700; /* Başlık  kalınlığı */
+    background-image: radial-gradient(#8c3c9a, #ee4b2b); /* Arkaplan renk ayarları */
+    color: transparent; /*şeffaf */
+    background-clip: text; /* Metin içine background uygulama */
+    -webkit-background-clip: text; /* Webkit için metin içine background uygulama?? */
+    padding: 20px; /* Başlık dolgusu */
+    background-color: #030202; 
+    text-align: center; 
+    
+}
+#header {
+    margin-top: 5px; /* Headerin üst taraftaki kenar boşluğu*/
+}
+
+/* Header içeriğindeki css */
+.header-content {
+    max-width: 600px; /* Başlık içeriği max genişlik */
+    margin: 0 auto; /* ortalama */
+}
+
+.header-content img {
+    width: 50px; /* Logo boyutu */
+    height: auto; /* Otomatik yükseklik ortalamak için kullandım*/
+}
+
+.header-content h1 {
+    font-size: 50px; 
+}
+
+.header-content p {
+    font-size: 18px; 
+    font-family: 'Oceanwide-Semibold'; /* Paragraf yazı tipi */
+    color: rgb(149, 146, 146); 
+}
+
+/* navigasyon css */
+nav {
+    position: relative; /* konum CSS özelliği, bir öğenin belgede nasıl konumlandırılacağını ayarlar. Üst, sağ, alt ve sol özellikleri, konumlandırılan öğelerin son konumunu belirler */
+    background-color: #333; 
+    width: 500px; /* genişliği */
+    display: flex; /* flexbox ile hizalama*/
+    margin: 60px auto; /* nav ortaya konumlardırma */
+    padding: 6px; /* nav dolgusu */
+    border-radius: 50px; /* nav kenar yarıçapı */
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3); /* kutulardaki gölgelendirme */
+    z-index: 1; /* Z indeksi ? */
+}
+
+
+
+/* fotoğraf galerisi */
+.gallery {
+    padding: 20px; 
+    text-align: center; 
+}
+
+/* fotoğrafların kutuları */
+.photo-box {
+    display: inline-block; /* blok öğeleri yan yana hizala */
+    margin: 10px; /* kutuların boşluk boyutu */
+    width: 300px; /* kutuların genişliği */
+    height: 300px; /* kutuların yüksekliği */
+    border: 2px solid #ccc; /* kutulardaki kenar çizgiler */
+    border-radius: 10px; /* Kenar ovalliği */
+    overflow: hidden; /* İçeriği taşma durumunda kırpmak için */
+    position: relative; /* Geçiş efektleri için */
+    transition: transform 0.3s ease; /* Geçiş efektinin dönüş saniye salisesi*/
+}
+
+/* fotoğrafların yazısı */
+.gallery h2 {
+    color: #333; 
+    margin-bottom: 20px; /* Yazı alt boşluku */
+}
+.gallery p{
+    color: #242224;
+}
+
+.photo-box:hover {
+    transform: scale(1.06); /* mause üzerine geldiğinde büyüme efekti */
+}
+
+.photo-box img {
+    width: 100%; /* foto genişliği */
+    height: 100%; /* foto yüksekliği */
+    object-fit: cover; /* fotolar kutuya sığacak şekilde  */
+}
+
+.gallery .photo-box {
+    position: relative;
+}
+
+/* fotoğraf galerisi kutuları */
+.photo-box {
+    position: relative; /* Görsel ve açıklama için göreceli konumlandırma */
+    overflow: hidden; /* İçeriği sığdırmak için taşmayı gizle */
+    margin-bottom: 20px; /* kutular arasında boşluk */
+}
+/*kutulardaki açıklamalar */
+.photo {
+    position: absolute;
+    bottom: 0; /* Kenar boşlukları */
+    left: 0; /* bir çerçevenin alt kenar boşluğu kenarının, çerçevenin 'içeren bloğunun' alt kenarının üzerinde ne kadar kaydırıldığını belirtir.    */
+    width: 100%; /* Kutu genişliği */
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
+    color: #fff; 
+    padding: 10px; /* Kenar boşlukları */
+    margin: 0; /* Dış boşlukları sıfırla */
+    opacity: 0; /* Başlangıçta görünmez yap */
+    transition: opacity 0.3s ease-in-out; /* Geçiş efekti */
+}
+
+/* fare üstüne gelince açıklama kısmı gözükür */
+.photo-box:hover .photo {
+    opacity: 1; /* Opaklık */
+}
+
+
+
+.container {
+    width: 700px; /* Konteyner genişliği */
+    margin: 10px; /* Konteyner kenar boşluğu */
+    height: 3%; /* Konteyner yüksekliği */
+    display: flex; /* Flexbox kullanarak öğeleri hizalama */
+    justify-content: center; /* Öğeleri yatayda hizalama */
+    align-items: center; /* Öğeleri dikeyde hizalama */
+}
+
+
+/* Sosyal ikonlar stilleri */
+.social-icons {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 10px; /* Üst kenar boşluğu */
+    left: calc(100% + 50px); /* Nav'ın tam yanında olacak şekilde sağ kenara yerleştirme */
+    display: flex; /* Ikonları yatay olarak hizalamak için flexbox kullan */
+    align-items: center;
+   
+}
+
+/* Sosyal ikon butonları stilleri */
+.soc-btn {
+    color: #333; /* İkon rengi */
+    text-decoration: none; /* Alt çizgi kaldırma */
+    margin-left: 15px; /* Sol boşluk */
+    font-size: 30px; /* İkon boyutu */
+}
+
+.soc-btn:hover {
+    color: #ef9df2; /* Üzerine gelindiğinde ikon rengi */
+}
+/* Sosyal ikonların yan yana hizalanması */
+.social-icons .soc-btn {
+    margin-right: 10px;
+}
+
+
+
+
+.nav-links {
+    list-style-type: none; /* Navigasyon bağlantılarının listesi stilini kaldırma */
+    margin: 0; /* Navigasyon kenar boşluğu */
+    padding: 0; /* Navigasyon dolgusu */
+}
+
+.nav-links li {
+    display: inline; /* Liste öğelerini yatay olarak hizalama */
+    margin-right: 20px; /* Liste öğeleri arası sağ boşluk */
+}
+
+.nav-links li:last-child {
+    margin-right: 0; /* Son öğe için sağ boşluğu kaldırma */
+}
+
+.nav-links a {
+    color: #fff; /* Bağlantı metin rengi */
+    text-decoration: none; /* Bağlantı alt çizgisini kaldırma */
+    padding: 8px 16px; /* Bağlantı dolgusu */
+    border-radius: 60px; /* Bağlantı kenar yarıçapı */
+    font-weight: bold; /* Metin kalınlığı */
+    transition: color 0.3s ease; /* Geçiş efekti */
+}
+
+.nav-links a:hover {
+    color: #aaa; /* Üzerine gelindiğinde bağlantı metin rengi */
+    transition: 0.25s; /* Geçiş süresi */
+    background-color: rgb(219, 169, 234); /* Üzerine gelindiğinde arka plan rengi */
+}
+
+
+
+/* Ana içerik stilleri */
+.main-content {
+    padding: 10px 20px; /* Ana içerik dolgusu */
+    text-align: center; /* Metin hizalama */
+    flex-grow: 1; /* Flexbox ile büyüme */
+}
+
+/* Proje içerik kutuları stilleri */
+.about-boxes {
+    display: flex; /* Flexbox kullanarak öğeleri hizalama */
+    justify-content: center; /* Öğeleri yatayda hizalama */
+    align-items: center; /* Öğeleri dikeyde hizalama */
+    flex-wrap: wrap; /* Flexbox ile sarma */
+}
+
+/* Hakkımda css */
+.about-box {
+    width: 500px; /* Kutu genişliği */
+    background-color: #f5f0f6; /* Kutu arka plan rengi */
+    border: 2px solid #875a84; /* Kutu kenar rengi */
+    border-radius: 5px; /* Kutu kenar yarıçapı */
+    margin: 20px auto; /* Kutu kenar boşluğu ve ortalaması */
+    padding: 20px; /* Kutu dolgusu */
+    box-shadow: 10px 10px 10px rgba(235, 101, 101, 0.1); /* Kutu gölgesi */
+    opacity: 0; /* Opaklık */
+    transform: translateY(20px); /* Y ekseninde kaydırma */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Geçiş efektleri */
+    border-radius: 30px; /* Oval kenarlar */
+}
+
+.about-box h3 {
+    color: #333; /* Başlık rengi */
+    font-size: 20px; /* Başlık font boyutu */
+}
+#about h2 {
+    color: #3e303c; /* Renk kodunu istediğiniz renk koduyla değiştirin */
+}
+
+.about-box p {
+    font-family: 'Oceanwide-Semibold'; /* Paragraf font */
+    color: #131010; 
+    font-size: 16px; /* Paragraf font boyutu */
+    margin-top: 10px; /* Paragraf üst boşluğu */
+}
+
+.about-box ul li {
+    color: rgb(39, 32, 37); /* Liste öğesi rengi */
+    font-family: Courier, monospace; /* Liste öğesi font*/
+}
+
+.about-box:nth-child(odd) {
+    animation: slideInLeft 1s forwards; /* Tek sıradaki kutu animasyonu */
+}
+
+.about-box:nth-child(even) {
+    animation: slideInRight 1s forwards; /* Çift sıradaki kutu animasyonu */
+}
+
+.button-container {
+    display: inline-block; /* Düğme konteynırı için inline-block özelliği */
+    margin-top: 15px; /* Üst kenar boşluğu */
+}
+
+/* Düğme still*/
+.button {
+    display: inline-block; /* Düğme öğesi için inline-block özelliği */
+    padding: 10px 20px; /* Düğme dolgusu */
+    background-color: #333; /* Düğme arka plan rengi */
+    color: #fff; /* Düğme metin rengi */
+    text-decoration: none; /* Düğme alt çizgisini kaldırma */
+    border: 2px solid #333; /* Düğme kenar rengi */
+    border-radius: 25px; /* Düğme kenar yarıçapı */
+    transition: all 0.3s ease; /* Geçiş efekti */
+    cursor: pointer; /* İmleç türü */
+}
+
+.button:hover {
+    background-color: #555; /* Üzerine gelindiğinde düğme arka plan rengi */
+    border-color: #555; /* Üzerine gelindiğinde düğme kenar rengi */
+}
+
+/* Sayfanın başına git düğmesi stili */
+.back-to-top {
+    position: fixed; /* Sabit konumlandırma */
+    bottom: 20px; /* Alt kenar boşluğu */
+    right: 20px; /* Sağ kenar boşluğu */
+    z-index: 999; /* Z-indeksi */
+}
+
+.back-to-top:hover {
+    background-color: #555; /* Üzerine gelindiğinde düğme arka plan rengi */
+    border-color: #555; /* Üzerine gelindiğinde düğme kenar rengi */
+}
+
+
+
+
+/* Projelerim css*/
+#projects {
+    padding: 50px 20px; /* Proje içeriği dolgusu */
+    text-align: center; /* Metin hizalama */
+    
+
+}
+
+.project-boxes {
+    display: flex; /* Flexbox kullanarak öğeleri hizalama */
+    justify-content: center; /* Öğeleri yatayda hizalama */
+    align-items: center; /* Öğeleri dikeyde hizalama */
+    flex-wrap: wrap; /* Flexbox ile sarma */
+    
+}
+
+.project-box {
+    width: 300px; /* Kutu genişliği */
+    background-color: #f5f0f6; /* Kutu arka plan rengi */
+    border: 2px solid #875a84; /* Kutu kenar rengi */
+    border-radius: 5px; /* Kutu kenar yarıçapı */
+    margin: 20px; /* Kutu kenar boşluğu */
+    padding: 20px; /* Kutu dolgusu */
+    box-shadow: 0 0 10px rgba(235, 101, 101, 0.1); /* Kutu gölgesi */
+    opacity: 0.8; /* Opaklık */
+    transition: opacity 0.5s ease; /* Geçiş efekti */
+    border-radius: 25px; /* Oval kenarlar */
+}
+
+.project-box:hover {
+    opacity: 1; /* Üzerine gelindiğinde opaklık */
+}
+
+.project-box h3 {
+    color: #333; /* Başlık rengi */
+    font-size: 20px; /* Başlık font boyutu */
+}
+#projects h2 {
+    color: #333; /* Renk kodunu istediğiniz renk koduyla değiştirin */
+}
+
+.project-box p {
+    color: #333; /* Paragraf rengi */
+    font-size: 16px; /* Paragraf font boyutu */
+    margin-top: 10px; /* Paragraf üst boşluğu */
+}
+
+
+.project-box p i {
+    margin-right: 3px; /* İkonlar arasında bir boşluk bırak */
+    display: inline-block; /* İkonları yan yana hizala */
+}
+
+
+
+
+
+/*iletişim css */
+
+.contact-section {
+    padding: 20px 0; /* Üst ve alt boşluk */
+    background-color: #f9f9f9; /* Arka plan rengi */
+    text-align: center; /* Metni ortala */
+}
+
+.section-title {
+    color: #333; /* Başlık rengi */
+    margin-bottom: 40px; /* Başlık alt boşluk */
+}
+
+.contact-container {
+    display: flex; /* İçerik ögelerini yatayda hizala */
+    justify-content: center; /* İçerik ögelerini ortala */
+    flex-wrap: wrap; /* İçerik ögelerini sarma */
+}
+
+.contact-info {
+    width: 300px; /* İçerik kutusu genişliği */
+    margin:  30px; /* İçerik kutuları arası boşluk */
+    padding: 20px; /* İçerik kutusu iç boşluk */
+    background-color: #fff; /* İçerik kutusu arka plan rengi */
+    border-radius: 8px; /* İçerik kutusu kenar yuvarlaklığı */
+    box-shadow: 20px 20px 20px rgba(230, 8, 164, 0.1); /* İçerik kutusu gölgelendirme */
+}
+
+.contact-heading {
+    font-size: 20px; /* Başlık font boyutu */
+    color: #333; /* Başlık rengi */
+    margin-bottom: 10px; /* Başlık alt boşluk */
+}
+
+.contact-details {
+    font-size: 20px; /* İçerik font boyutu */
+    color: #666; /* İçerik rengi */
+}
+
+.social-link {
+    color: #333; /* Sosyal medya link rengi */
+    font-size: 30px; /* Sosyal medya link font boyutu */
+    margin: 0 5px; /* Sosyal medya linkleri arası boşluk */
+}
+
+
+
+
+
+
+
+
+/* Animasyonlu CSS */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
